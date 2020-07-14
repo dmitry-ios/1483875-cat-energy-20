@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Дмитрий Бессонов](https://up.htmlacademy.ru/adaptive/20/user/1483875).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Аверин](https://up.htmlacademy.ru/adaptive/20/user/1061531).
 
 ---
 
