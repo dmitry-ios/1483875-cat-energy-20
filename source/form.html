@@ -30,7 +30,108 @@
       </nav>
     </header>
 
+    <main class="page-main">
+      <h1 class="page-main__title">Подбор программы</h1>
+      <p class="page-main__description">
+        Заполните анкету, и мы подберем
+        программу питания для вашего кота
+      </p>
+      <form class="page-main__form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="personal-data">
+          <legend class="visually-hidden"><h2>Личные данные</h2></legend>
+          <ul class="personal-data__list">
+            <li class="personal-data__item">
+              <label class="personal-data__label" for="field-name">Имя:<sup>*</sup></label>
+              <input class="personal-data__input" id="field-name" type="text" name="name" placeholder="Барсик" required>
+            </li>
+            <li class="personal-data__item">
+              <label class="personal-data__label" for="field-weight">Вес (кг):<sup>*</sup></label>
+              <input class="personal-data__input" id="field-weight" type="number" name="weight" placeholder="7" required>
+            </li>
+            <li class="personal-data__item">
+              <label class="personal-data__label" for="field-age">Возраст (лет):</label>
+              <input class="personal-data__input" id="field-age" type="number" name="age" placeholder="7">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="type-of-program">
+          <legend class="visually-hidden"><h2>Тип программы</h2></legend>
+          <ul class="type-of-program__list">
+            <li class="type-of-program__item">
+              <input class="type-of-program__input" id="field-lower-weight" type="radio" name="goal" value="lower-weight" checked>
+              <label class="type-of-program__label" for="field-lower-weight">Похудение</label>
+            </li>
+            <li class="type-of-program__item">
+              <input class="type-of-program__input" id="field-upper-weight" type="radio" name="goal" value="upper-weight">
+              <label class="type-of-program__label" for="field-upper-weight">Набор массы</label>
+            </li>
+            <li class="type-of-program__item">
+              <input class="type-of-program__input" id="field-idontknow" type="radio" name="goal" value="idontknow">
+              <label class="type-of-program__label" for="field-idontknow">Не знаю (Нужен ваш совет)</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="owner-contacs">
+          <legend class="owner-contacs__legend">
+            <h2 class="owner-contacs__title">Контактные данные
+            (владельца кота)</h2>
+          </legend>
+          <ul class="owner-contacs__list">
+            <li class="owner-contacs__item">
+              <label class="owner-contacs__label" for="field-email">E-mail:<sup>*</sup></label>
+              <input class="owner-contacs__input" id="field-email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+            </li>
+            <li class="owner-contacs__item">
+              <label class="owner-contacs__label" for="field-phone">Телефон:<sup>*</sup></label>
+              <input class="owner-contacs__input" id="field-phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="comments">
+          <legend class="comments__legend"><h2 class="comments__title">Комментарий</h2></legend>
+          <textarea class="comments__text" name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+        <fieldset class="addition">
+          <legend class="addition__legend"><h2 class="addition__title">Дополнительно</h2></legend>
+          <ul class="addition__list">
+            <li class="addition__item">
+              <input class="addition__input" id="field-sugar-substitute" type="checkbox" name="sugar-substitute" checked>
+              <label class="addition__label" for="field-sugar-substitute">Сахарозаменитель</label>
+            </li>
+            <li class="addition__item">
+              <input class="addition__input" id="field-water" type="checkbox" name="water">
+              <label class="addition__label" for="field-water">Питьевая вода</label>
+            </li>
+            <li class="addition__item">
+              <input class="addition__input" id="field-milk" type="checkbox" name="milk">
+              <label class="addition__label" for="field-milk">Молоко</label>
+            </li>
+            <li class="addition__item">
+              <input class="addition__input" id="field-vitamin" type="checkbox" name="vitamin">
+              <label class="addition__label" for="field-vitamin">Витамины</label>
+            </li>
+          </ul>
+        </fieldset>
+        <input class="page-main__submit" type="submit" value="Отправить заявку">
+        <p class="page-main__field-comment">* — Обязательные поля</p>
+      </form>
+    </main>
+
     <footer class="page-footer">
+
+      <section class="page-footer__address">
+        <h2 class="visually-hidden">Адрес компании</h2>
+        <strong class="welcome">
+          Приглашаем к сотрудничеству дилеров!
+        </strong>
+        <p class="address">
+          ул. Большая
+          Конюшенная, д. 19/8
+          Санкт-Петербург
+        </p>
+        <img class="map" src="https://via.placeholder.com/320x362" width="320" height="362" alt="Местоположение компании на карте">
+      </section>
+
       <a class="page-footer__logo">
         <img src="https://via.placeholder.com/128x24" width="128" height="24" alt="Кэт энерджи">
       </a>
