@@ -21,6 +21,12 @@ const styles = () => {
     .pipe(sync.stream());
 }
 
+const normalize = () => {
+  return gulp.src("node_modules/normalize.css/normalize.css")
+    .pipe(gulp.dest("source/css"))
+    .pipe(sync.stream());
+}
+
 exports.styles = styles;
 
 // Server
@@ -47,5 +53,5 @@ const watcher = () => {
 }
 
 exports.default = gulp.series(
-  styles, server, watcher
+  styles, normalize, server, watcher
 );
