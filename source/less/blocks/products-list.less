@@ -3,10 +3,29 @@
   margin-top: 41px;
   padding: 0;
 
-  list-style: 0;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 324px 324px;
+    gap: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+    grid-template-columns: 245px 245px 245px 245px;
+    column-gap: 80px;
+    row-gap: 63px;
+  }
 }
 
 .products-list__item {
   margin-top: 11px;
-  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 284px;
+    margin-top: 73px;
+
+    background-color: @basic-grey;
+  }
 }
