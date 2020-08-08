@@ -1,22 +1,72 @@
 .programs-list {
-  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    margin-top: 82px;
+  }
 }
 
 .programs-list__wrapper {
-  margin: 0 20px;
-  margin-top: 20px;
-  padding: 21px 20px;
-  padding-bottom: 18px;
+  margin-bottom: 20px;
 
   background-color: @basic-grey;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    margin-right: 80px;
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
 }
 
 .programs-list__title {
+  padding-right: 20px;
+  padding-left: 91px;
+  padding-top: 30px;
+
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 314px;
+    padding-left: 53px;
+    padding-top: 77px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 51px;
+    padding-left: 214px;
+  }
 }
 
 .programs-list__description {
   margin: 0;
+  padding: 18px 20px;
+  padding-top: 29px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 314px;
+    padding-left: 52px;
+    padding-top: 24px;
+    padding-bottom: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 73px;
+    padding-left: 52px;
+    padding-right: 51px;
+    padding-bottom: 55px;
+  }
 }

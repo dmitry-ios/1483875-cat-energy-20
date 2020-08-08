@@ -2,19 +2,36 @@
   color: @basic-white;
   font-weight: 400;
   text-align: center;
+
+  @media (min-width: @desktop-width) {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 .offer__inner-top {
   min-height: 305px;
   padding-top: 27px;
-  padding-left: 36px;
-  padding-right: 35px;
   box-sizing: border-box;
 
-  background-color: @basic-green;
+  background-color: @background-green;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: top left;
+  background-position: top center;
+
+  @media (min-width: @tablet-width) {
+    min-height: 0;
+    padding-top: 87px;
+
+    text-align: left;
+
+    background: none;
+    background-color: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 223px;
+  }
 }
 
 .offer__header {
@@ -24,6 +41,20 @@
   font-weight: inherit;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 88px;
+    margin-bottom: 41px;
+
+    color: @basic-black;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 80px;
+    margin-bottom: 40px;
+  }
 }
 
 .offer__text {
@@ -32,11 +63,35 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 88px;
+
+    color: @basic-black;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 80px;
+  }
 }
 
 .offer__program-link-wrapper {
-  margin: 0 20px;
   margin-top: 135px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 83px;
+    margin-top: 49px;
+    margin-bottom: 526px;
+
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+    margin-bottom: 267px;
+  }
 }
 
 .offer__program-link {
@@ -50,4 +105,9 @@
 
   background-color: @basic-green;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    padding: 14px 26px;
+  }
 }

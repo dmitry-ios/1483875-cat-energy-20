@@ -1,15 +1,16 @@
 .copyright__link {
   display: block;
-  margin: 0 20px;
-  margin-top: 28px;
-  margin-bottom: 32px;
-
   font-family: @additional-font;
   font-size: 16px;
   line-height: 18px;
   color: @special-dark-grey;
 
   text-decoration: none;
+
+  @media (max-width: @mobile-only-width) {
+    margin-top: 28px;
+    margin-bottom: 32px;
+  }
 }
 
 .copyright__link:active {

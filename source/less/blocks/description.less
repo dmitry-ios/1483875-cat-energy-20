@@ -6,12 +6,28 @@
 }
 
 .description__details {
+  display: inline-block;
+  margin-top: 23px;
+  padding-top: 15px;
+  padding-right: 47px;
+
   color: @basic-black;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
 
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 48px;
+    padding: 0;
+    padding-right: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 23px;
+    padding-right: 60px;
+  }
 }
 
 .description__details:active {

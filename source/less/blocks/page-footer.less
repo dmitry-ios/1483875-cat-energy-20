@@ -4,11 +4,12 @@
 }
 
 .page-footer__logo {
-  display: block;
-  margin: 0 20px;
-  margin-top: 39px;
-
   text-align: center;
+
+  @media (max-width: @mobile-only-width) {
+    margin-top: 39px;
+    margin-bottom: 31px;
+  }
 }
 
 .welcome {
@@ -24,4 +25,20 @@
   font-size: 14px;
   line-height: 20px;
   color: @special-dark-grey;
+}
+
+.page-footer__inner-bottom {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 146px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 149px;
+  }
 }

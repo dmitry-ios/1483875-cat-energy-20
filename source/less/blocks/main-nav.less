@@ -1,5 +1,17 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .main-nav__inner-top {
-  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-nav__logo {
@@ -11,4 +23,14 @@
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.main-nav__toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

@@ -23,5 +23,31 @@ img {
 }
 
 .container {
+  min-width: @min-container;
+  max-width: @mobile-container;
+  margin: 0 auto;
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    max-width: @tablet-container;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-container;
+    padding: 0 110px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
