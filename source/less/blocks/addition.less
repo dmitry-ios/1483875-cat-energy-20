@@ -9,3 +9,16 @@
 .addition__label {
   color: @basic-black;
 }
+
+.addition__list {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 305px 305px;
+    column-gap: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 227px 227px 227px 227px;
+    column-gap: 80px;
+  }
+}
