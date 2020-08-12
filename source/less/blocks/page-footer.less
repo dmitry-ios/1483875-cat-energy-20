@@ -13,18 +13,31 @@
 }
 
 .welcome {
+  width: 140px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color: @special-mega-dark-grey;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 171px;
+  }
 }
 
 .address {
+  margin: 0;
+  width: 140px;
+
   font-family: @additional-font;
   font-size: 14px;
   line-height: 20px;
   color: @special-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 159px;
+  }
 }
 
 .page-footer__inner-bottom {
@@ -40,5 +53,37 @@
 
   @media (min-width: @desktop-width) {
     min-height: 149px;
+  }
+}
+
+.page-footer__address {
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+}
+
+.page-footer__address-inner {
+  min-width: @min-container;
+  max-width: @mobile-container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 28px 19px;
+  padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    max-width: @tablet-container;
+    padding: 65px 71px;
+    padding-bottom: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: calc(50% - 285px - 325px);
+    width: 570px;
+
+    background-color: @basic-white;
   }
 }

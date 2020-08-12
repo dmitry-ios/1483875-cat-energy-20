@@ -1,3 +1,11 @@
+.true-story__inner {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 436px 650px;
+    column-gap: 134px;
+  }
+}
+
 .true-story {
   background-color: @basic-light-grey;
 }
@@ -6,21 +14,46 @@
   font-weight: 400;
   font-size: 34px;
   line-height: 40px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .true-story__text {
   font-family: @additional-font;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 146px;
+  }
 }
 
 .true-story__statistic {
+  display: flex;
+  justify-content: center;
   padding: 0;
+
   list-style: none;
+
+  @media (min-width: @desktop-width) {
+    justify-content: start;
+  }
 }
 
 .true-story__total {
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
 }
 
 .true-story__button {
@@ -31,4 +64,34 @@
 
   background-color: transparent;
   border: 0;
+}
+
+.true-story__button-wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 64px;
+  }
+}
+
+
+.true-story__inner-middle {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 366px 341px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    padding-top: 69px;
+  }
+}
+
+.true-story__inner-bottom {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 656px;
+  }
 }

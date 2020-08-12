@@ -44,40 +44,42 @@
           программу питания для вашего кота
         </p>
         <form class="page-main__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="personal-data page-main__fieldset">
-            <legend class="visually-hidden"><h2>Личные данные</h2></legend>
-            <ul class="personal-data__list page-main__form-list">
-              <li class="personal-data__item">
-                <label class="personal-data__label" for="field-name">Имя:<sup>*</sup></label>
-                <input class="personal-data__input" id="field-name" type="text" name="name" placeholder="Барсик" required>
-              </li>
-              <li class="personal-data__item">
-                <label class="personal-data__label" for="field-weight">Вес (кг):<sup>*</sup></label>
-                <input class="personal-data__input" id="field-weight" type="number" name="weight" placeholder="7" required>
-              </li>
-              <li class="personal-data__item">
-                <label class="personal-data__label" for="field-age">Возраст (лет):</label>
-                <input class="personal-data__input" id="field-age" type="number" name="age" placeholder="7">
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="type-of-program page-main__fieldset">
-            <legend class="visually-hidden"><h2>Тип программы</h2></legend>
-            <ul class="type-of-program__list  page-main__form-list">
-              <li class="type-of-program__item">
-                <input class="type-of-program__input" id="field-lower-weight" type="radio" name="goal" value="lower-weight" checked>
-                <label class="type-of-program__label" for="field-lower-weight">Похудение</label>
-              </li>
-              <li class="type-of-program__item">
-                <input class="type-of-program__input" id="field-upper-weight" type="radio" name="goal" value="upper-weight">
-                <label class="type-of-program__label" for="field-upper-weight">Набор массы</label>
-              </li>
-              <li class="type-of-program__item">
-                <input class="type-of-program__input" id="field-idontknow" type="radio" name="goal" value="idontknow">
-                <label class="type-of-program__label" for="field-idontknow">Не знаю (Нужен ваш совет)</label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="page-main__top-form">
+            <fieldset class="personal-data page-main__fieldset">
+              <legend class="visually-hidden"><h2>Личные данные</h2></legend>
+              <ul class="personal-data__list page-main__form-list">
+                <li class="personal-data__item">
+                  <label class="personal-data__label" for="field-name">Имя:<sup>*</sup></label>
+                  <input class="personal-data__input" id="field-name" type="text" name="name" placeholder="Барсик" required>
+                </li>
+                <li class="personal-data__item">
+                  <label class="personal-data__label" for="field-weight">Вес (кг):<sup>*</sup></label>
+                  <input class="personal-data__input" id="field-weight" type="number" name="weight" placeholder="7" required>
+                </li>
+                <li class="personal-data__item">
+                  <label class="personal-data__label" for="field-age">Возраст (лет):</label>
+                  <input class="personal-data__input" id="field-age" type="number" name="age" placeholder="7">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="type-of-program page-main__fieldset">
+              <legend class="visually-hidden"><h2>Тип программы</h2></legend>
+              <ul class="type-of-program__list  page-main__form-list">
+                <li class="type-of-program__item">
+                  <input class="type-of-program__input" id="field-lower-weight" type="radio" name="goal" value="lower-weight" checked>
+                  <label class="type-of-program__label" for="field-lower-weight">Похудение</label>
+                </li>
+                <li class="type-of-program__item">
+                  <input class="type-of-program__input" id="field-upper-weight" type="radio" name="goal" value="upper-weight">
+                  <label class="type-of-program__label" for="field-upper-weight">Набор массы</label>
+                </li>
+                <li class="type-of-program__item">
+                  <input class="type-of-program__input" id="field-idontknow" type="radio" name="goal" value="idontknow">
+                  <label class="type-of-program__label" for="field-idontknow">Не знаю (Нужен ваш совет)</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
           <fieldset class="owner-contacs page-main__fieldset">
             <legend class="owner-contacs__legend">
               <h2 class="owner-contacs__title">Контактные данные
@@ -119,8 +121,10 @@
               </li>
             </ul>
           </fieldset>
-          <input class="page-main__submit" type="submit" value="Отправить заявку">
-          <p class="page-main__field-comment">* — Обязательные поля</p>
+          <div class="page-main__bottom-form">
+            <input class="page-main__submit" type="submit" value="Отправить заявку">
+            <p class="page-main__field-comment">* — Обязательные поля</p>
+          </div>
         </form>
       </div>
     </main>
@@ -128,7 +132,7 @@
     <footer class="page-footer">
 
       <section class="page-footer__address">
-        <div class="container">
+        <div class="page-footer__address-inner">
           <h2 class="visually-hidden">Адрес компании</h2>
           <strong class="welcome">
             Приглашаем к сотрудничеству дилеров!
