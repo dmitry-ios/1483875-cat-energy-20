@@ -1,4 +1,6 @@
 .site-list {
+  padding-top: 14px;
+
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
@@ -18,28 +20,78 @@
 }
 
 .site-list__item {
+  position: relative;
+
   padding-top: 22px;
   padding-bottom: 24px;
 
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -1px;
+    left: -20px;
+    right: -20px;
+
+    height: 1px;
+
+    background-color: @basic-menu-border-grey;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    right: -20px;
+
+    height: 1px;
+
+    background-color: @basic-menu-border-grey;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
   @media (min-width: @tablet-width) {
-    padding-right: 35px;
+    margin-right: 35px;
+    padding-top: 5px;
+    padding-bottom: 7px;
 
     &:last-child {
-      padding-right: 0;
+      margin-right: 0;
     }
 
-    padding-top: 18px;
-    padding-bottom: 0;
+    &--active,
+    &--active-for-green {
+      border-bottom: 2px solid @basic-green;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 16px;
     padding-bottom: 2;
+
+    &--active-for-green {
+      border-bottom: 2px solid @basic-white;
+    }
   }
 }
 
 .site-list__link {
   color: @basic-black;
+
+  @media (min-width: @desktop-width) {
+    &--for-green {
+      color: @basic-white;
+    }
+  }
 }
 
 .site-list__link:hover,
