@@ -18,10 +18,11 @@
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
+  background-size: cover;
 
   @media (min-width: @tablet-width) {
     min-height: 0;
-    padding-top: 87px;
+    padding-top: 64px;
 
     text-align: left;
 
@@ -30,7 +31,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 223px;
+    padding-top: 116px;
+
+    background-color: transparent;
   }
 }
 
@@ -53,6 +56,7 @@
 
   @media (min-width: @desktop-width) {
     margin: 0 80px;
+    margin-right: 50%;
     margin-bottom: 40px;
   }
 }
@@ -78,6 +82,8 @@
 }
 
 .offer__program-link-wrapper {
+  position: relative;
+
   margin-top: 135px;
 
   @media (min-width: @tablet-width) {
@@ -90,13 +96,53 @@
 
   @media (min-width: @desktop-width) {
     margin-left: 80px;
+    margin-top: 52px;
     margin-bottom: 267px;
+  }
+
+  &--bucket {
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -274px;
+      left: calc(50% - 280px / 2);
+
+      width: 280px;
+      height: 271px;
+
+      background-image: url("../img/index-can-mobile@1x.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      @media (min-width: @tablet-width) {
+        z-index: -1;
+        top: -28px;
+        left: -83px;
+
+        width: 709px;
+        height: 609px;
+
+        background-image: url("../img/index-can-tablet@1x.jpg");
+        // background-color: cadetblue;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: -314px;
+        left: 369px;
+
+        width: 552px;
+        height: 499px;
+
+        background-image: url("../img/index-can-desktop@1x.png");
+      }
+    }
   }
 }
 
 .offer__program-link {
   display: block;
-  padding: 7px 44px;
+  padding: 11px 47px;
 
   color: @basic-white;
   font-weight: inherit;
@@ -106,8 +152,20 @@
   background-color: @basic-green;
   text-decoration: none;
 
+  &:hover,
+  &:focus {
+    background-color: @basic-focus-green;
+  }
+
+  &:active .offer__program-link-text {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     display: inline-block;
     padding: 14px 26px;
+
+    font-size: 20px;
+    line-height: 26px;
   }
 }

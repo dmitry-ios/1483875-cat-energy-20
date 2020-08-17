@@ -16,7 +16,24 @@
   }
 }
 
+.product__img-link {
+  flex-shrink: 0;
+  width: 140px;
+  height: 112px;
+
+  @media (min-width: @tablet-width) {
+    width: 168px;
+    height: 200px;
+  }
+
+  overflow: hidden;
+}
+
 .product__title {
+  padding-top: 2px;
+  padding-right: 50px;
+  margin-bottom: 12px;
+
   @media (min-width: @tablet-width) {
     padding: 0 55px;
 
@@ -25,10 +42,12 @@
 
   @media (min-width: @desktop-width) {
     padding: 0 16px;
+    padding-bottom: 5px;
   }
 }
 
 .product__info {
+  padding: 0;
   width: 100%;
 
   color: @special-dark-grey;
@@ -37,7 +56,8 @@
   line-height: 16px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 21px;
+    padding-top: 7px;
+    border-collapse: collapse;
 
     font-size: 16px;
   }
@@ -45,12 +65,13 @@
 
 .product__full-inner {
   display: flex;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
     align-items: center;
     padding: 0 36px;
-    margin-top: -73px;
+    // margin-top: -73px;
   }
 }
 
@@ -60,20 +81,34 @@
   @media (min-width: @tablet-width) {
     padding-top: 34px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 35px;
+  }
+}
+
+.product__row {
+  padding: 0;
 }
 
 .product__column {
+  padding: 0;
+
   &--to-right {
     text-align: right;
   }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 14px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid @basic-table-border;
   }
 }
 
 .product__link {
   display: block;
+  margin-top: 16px;
   padding: 20px;
 
   color: @basic-white;
@@ -86,24 +121,43 @@
   text-decoration: none;
   background-color: @basic-green;
 
+  &:hover,
+  &:focus {
+    background-color: @basic-focus-green;
+  }
+
+  &:active .product__link-text {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
-    margin-top: 33px;
+    margin-top: 32px;
     margin-left: 39px;
     margin-right: 37px;
     margin-bottom: 40px;
   }
 
+  @media (min-width: @desktop-width) {
+    margin-top: 35px;
+  }
+
   &--all {
+    margin-top: 20px;
     color: @special-dark-grey;
 
     background-color: @basic-grey;
 
+    &:hover,
+    &:focus {
+      background-color: @basic-item-border-grey;
+    }
+
     @media (min-width: @tablet-width) {
-      margin-top: 110px;
+      margin-top: 85px;
     }
 
     @media (min-width: @desktop-width) {
-      margin-top: 98px;
+      margin-top: 85px;
     }
   }
 }
