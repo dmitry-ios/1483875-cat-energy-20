@@ -2,22 +2,122 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 895px 245px;
-    column-gap: 59px;
+    column-gap: 80px;
+    margin-top: 80px;
+    margin-bottom: 85px;
+  }
+}
+
+.add-products__title-wrapper {
+  position: relative;
+
+  &::after {
+    z-index: -1;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: -20px;
+
+    height: 2px;
+
+    content: "";
+
+    background-color: @basic-green;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      top: 65px;
+      right: -30px;
+    }
+
+    &::before {
+      z-index: -1;
+      position: absolute;
+      top: 65px;
+      left: -30px;
+
+      height: 2px;
+      width: 30px;
+
+      content: "";
+
+      background-color: @basic-green;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      top: 72px;
+      right: -110px;
+    }
+
+    &::before {
+      z-index: -1;
+      position: absolute;
+      top: 72px;
+      left: -110px;
+
+      height: 2px;
+      width: 70px;
+
+      content: "";
+
+      background-color: @basic-green;
+    }
   }
 }
 
 .add-products__title {
-  padding: 20px;
+  display: inline-block;
+  padding: 0;
+  padding-top: 5px;
+  padding-right: 20px;
+  margin: 0;
+
   font-family: @basic-font;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
   line-height: 24px;
   color: @basic-black;
+
+  background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 42px;
+    padding-left: 38px;
+    padding-right: 38px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    padding-top: 50px;
+    padding-right: 38px;
+  }
 }
 
 .add-products__list {
-  padding: 0 20px;
+  padding: 0;
+  padding-top: 35px;
+  margin: 0;
 
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 80px;
+    padding-top: 0;
+
+    border: 1px solid @basic-table-border;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+  }
 }

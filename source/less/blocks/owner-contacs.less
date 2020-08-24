@@ -1,19 +1,164 @@
+.owner-contacs__legend {
+  position: relative;
+
+  width: 100%;
+
+  &::after {
+    z-index: -9;
+    position: absolute;
+    top: 42px;
+    right: -20px;
+    left: 0;
+
+    height: 2px;
+
+    content: "";
+
+    background-color: @basic-green;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      left: -30px;
+      right: -30px;
+      top: 97px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      left: 0;
+      right: -78px;
+      top: 92px;
+    }
+
+    &::before {
+      z-index: -9;
+      position: absolute;
+      left: -110px;
+      top: 92px;
+
+      height: 2px;
+      width: 70px;
+
+      content: "";
+
+      background-color: @basic-green;
+    }
+  }
+}
+
 .owner-contacs__list {
+  margin-top: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 76px;
+    margin-left: 39px;
+    margin-right: 36px;
+  }
+
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 550px 550px;
-    column-gap: 80px;
+    grid-template-columns: 569px 569px;
+    column-gap: 77px;
+    margin-left: 0;
+  }
+}
+
+.owner-contacs__item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  &--mail::before {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    width: 17px;
+    height: 13px;
+
+    content: "";
+
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @media (min-width: @tablet-width) {
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+  &--phone::before {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 20px;
+    height: 20px;
+
+    content: "";
+
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @media (min-width: @tablet-width) {
+      top: 15px;
+      right: 16px;
+    }
   }
 }
 
 .owner-contacs__title {
+  display: inline-block;
+  margin: 0;
+  margin-top: 26px;
+  margin-right: 79px;
+
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   color: @basic-black;
   text-transform: none;
+
+  background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 75px;
+    padding-left: 39px;
+    padding-right: 30px;
+    margin-right: 115px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 70px;
+    padding-left: 0;
+  }
 }
 
 .owner-contacs__input {
+  flex-grow: 1;
+  margin-left: 12px;
+  padding-left: 14px;
+  padding-right: 34px;
+  height: 39px;
+
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 18px;
+    margin-left: 23px;
+    height: 46px;
+  }
 }

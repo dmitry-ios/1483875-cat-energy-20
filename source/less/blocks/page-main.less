@@ -18,6 +18,10 @@
 }
 
 .page-main__description {
+  margin-bottom: 0;
+  padding-top: 12px;
+  padding-right: 54px;
+
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
@@ -29,12 +33,14 @@
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 16px;
     padding-left: 0;
     padding-right: 897px;
   }
 }
 
 .page-main__form {
+  padding-top: 21px;
   padding-bottom: 32px;
 
   font-size: 16px;
@@ -44,6 +50,9 @@
 
   @media (min-width: @tablet-width) {
     padding-bottom: 72px;
+
+    font-size: 20px;
+    line-height: 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -52,6 +61,8 @@
 }
 
 .page-main__top-form {
+  margin-top: 17px;
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 568px 568px;
@@ -60,8 +71,15 @@
 }
 
 .page-main__bottom-form {
+  margin-top: 17px;
+
   @media (min-width: @tablet-width) {
     display: flex;
+    margin-top: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 25px;
   }
 }
 
@@ -73,10 +91,16 @@
 }
 
 .page-main__fieldset {
+  margin: 0;
+  padding: 0;
+
   border: 0;
 }
 
 .page-main__field-comment {
+  margin: 0;
+  margin-top: 21px;
+
   font-family: @additional-font;
   font-size: 14px;
   line-height: 16px;
@@ -86,7 +110,11 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    margin-top: 16px;
     margin-left: 61px;
+
+    font-size: 16px;
+    line-height: 16px;
   }
 
   @media (min-width: @desktop-width) {
@@ -96,7 +124,7 @@
 
 .page-main__submit {
   display: block;
-  padding: 7px 44px;
+  padding: 10px 44px;
   width: 100%;
 
   color: @basic-white;
@@ -107,12 +135,15 @@
   text-transform: uppercase;
 
   text-decoration: none;
-  background-color: @basic-green;
   border: 0;
 
   @media (min-width: @tablet-width) {
     width: 282px;
-    margin-left: 40px;
+    margin-left: 41px;
+    padding: 16px 44px;
+
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media (min-width: @desktop-width) {

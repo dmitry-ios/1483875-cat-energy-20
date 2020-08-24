@@ -1,0 +1,23 @@
+.button {
+  &--green {
+    background-color: @basic-green;
+  }
+
+  &--green:focus,
+  &--green:hover {
+    background-color: @basic-focus-green;
+  }
+
+  &--grey {
+    background-color: @basic-grey;
+  }
+
+  &--grey:focus,
+  &--grey:hover {
+    background-color: @basic-item-border-grey;
+  }
+}
+
+.button:active .button__text {
+  opacity: 0.3;
+}

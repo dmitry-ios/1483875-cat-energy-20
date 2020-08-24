@@ -1,11 +1,52 @@
 .product-item {
+  margin-bottom: 18px;
+
+  border-top: 1px solid @basic-table-border;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 12px;
+    padding-bottom: 28px;
+
+    border: 0;
+    border-bottom: 1px solid @basic-table-border;
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
-    padding: 15px 0;
+    padding: 13px 0;
+    margin-bottom: 5px;
+
+    &:first-child {
+      border-top: 1px solid @basic-table-border;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid @basic-table-border;
+    }
+  }
+}
+
+.product-item__info {
+  padding-top: 10px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    width: auto;
   }
 }
 
 .product-item__title {
+  margin: 0;
+  margin-top: 14px;
+
   font-family: @basic-font;
   font-weight: normal;
   font-size: 16px;
@@ -13,16 +54,41 @@
   text-transform: uppercase;
 
   color: @basic-black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .product-item__column {
+  padding: 0;
+  width: 50%;
+
   font-family: @additional-font;
   color: @special-dark-grey;
   font-size: 14px;
   line-height: 14px;
-  text-align: right;
+
+  &--first {
+    text-align: left;
+  }
+
+  &--last {
+    text-align: right;
+    text-transform: uppercase;
+  }
 
   @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    vertical-align: text-bottom;
+
+    &--first {
+      text-align: right;
+      width: 200px;
+    }
+
     &--last {
       width: 90px;
     }
@@ -30,6 +96,8 @@
 
   @media (min-width: @desktop-width) {
     &--first {
+      width: 135px;
+
       text-align: left;
     }
 
@@ -42,6 +110,7 @@
 .product-item__link {
   display: block;
   padding: 20px;
+  margin-top: 13px;
 
   color: @basic-white;
   font-weight: inherit;
@@ -53,11 +122,17 @@
   text-decoration: none;
   background-color: @basic-green;
 
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+    padding-bottom: 18px;
+  }
+
   @media (min-width: @desktop-width) {
     box-sizing: border-box;
-    width: 244px;
+    width: 254px;
     height: 40px;
-    margin-left: 39px;
+    margin: 0;
+    margin-left: 30px;
   }
 }
 
@@ -65,7 +140,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
   }
 
   @media (min-width: @desktop-width) {
