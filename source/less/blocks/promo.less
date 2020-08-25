@@ -1,12 +1,43 @@
 .promo {
+  position: relative;
+
   color: @basic-white;
   font-family: @additional-font;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
 
+  &--bonus::before {
+    position: absolute;
+    top: -121px;
+    left: calc(50% - 28px);
+
+    width: 56px;
+    height: 60px;
+
+    content: "";
+
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @media (min-width: @tablet-width) {
+      top: -5px;
+      left: -333px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -120px;
+      left: 50px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     text-align: left;
     margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
   }
 }

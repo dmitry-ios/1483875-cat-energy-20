@@ -15,9 +15,9 @@
             <a class="main-nav__logo" href="index.html">
               <img src="img/logo-mobile.svg" width="191" height="38" alt="Кэт энерджи">
             </a>
-            <button class="main-nav__toggle" type="button">
+            <button class="main-nav__toggle main-nav__toggle--nojs" type="button">
               <span class="visually-hidden">
-                Открыть меню
+                Закрыть меню
               </span>
             </button>
           </div>
@@ -67,8 +67,8 @@
                 </table>
               </div>
             </div>
-            <a class="product__link" href="">
-              <span class="product__link-text">Заказать</span>
+            <a class="product__link button button--green" href="">
+              <span class="button__text">Заказать</span>
             </a>
           </li>
 
@@ -99,8 +99,8 @@
                 </table>
               </div>
             </div>
-            <a class="product__link" href="">
-              <span class="product__link-text">Заказать</span>
+            <a class="product__link button button--green" href="">
+              <span class="button__text">Заказать</span>
             </a>
           </li>
 
@@ -131,8 +131,8 @@
                 </table>
               </div>
             </div>
-            <a class="product__link" href="">
-              <span class="product__link-text">Заказать</span>
+            <a class="product__link button button--green" href="">
+              <span class="button__text">Заказать</span>
             </a>
           </li>
 
@@ -163,8 +163,8 @@
                 </table>
               </div>
             </div>
-            <a class="product__link" href="">
-              <span class="product__link-text">Заказать</span>
+            <a class="product__link button button--green" href="">
+              <span class="button__text">Заказать</span>
             </a>
           </li>
 
@@ -195,8 +195,8 @@
                 </table>
               </div>
             </div>
-            <a class="product__link" href="">
-              <span class="product__link-text">Заказать</span>
+            <a class="product__link button button--green" href="">
+              <span class="button__text">Заказать</span>
             </a>
           </li>
 
@@ -227,8 +227,8 @@
                 </table>
               </div>
             </div>
-            <a class="product__link" href="">
-              <span class="product__link-text">Заказать</span>
+            <a class="product__link button button--green" href="">
+              <span class="button__text">Заказать</span>
             </a>
           </li>
 
@@ -259,8 +259,8 @@
                 </table>
               </div>
             </div>
-            <a class="product__link" href="">
-              <span class="product__link-text">Заказать</span>
+            <a class="product__link button button--green" href="">
+              <span class="button__text">Заказать</span>
             </a>
           </li>
 
@@ -269,15 +269,17 @@
             <p class="product-all__description">
               На самом деле вкусов гораздо больше!
             </p>
-            <a class="product__link product__link--all" href="">
-              <span class="product__link-text">Показать все</span>
+            <a class="product__link product__link--all button button--grey" href="">
+              <span class="button__text">Показать все</span>
             </a>
           </li>
         </ul>
 
 
         <section class="add-products">
-          <h2 class="add-products__title">Дополнительные товары</h2>
+          <div class="add-products__title-wrapper">
+            <h2 class="add-products__title">Дополнительные товары</h2>
+          </div>
           <div class="add-products__inner">
             <ul class="add-products__list">
               <li class="add-products__item product-item">
@@ -290,7 +292,9 @@
                     </tr>
                   </table>
                 </div>
-                <a class="product-item__link" href="">Заказать</a>
+                <a class="product-item__link button button--green" href="">
+                  <span class="button__text">Заказать</span>
+                </a>
               </li>
               <li class="add-products__item product-item">
                 <div class="product-item__top">
@@ -302,7 +306,9 @@
                     </tr>
                   </table>
                 </div>
-                <a class="product-item__link" href="">Заказать</a>
+                <a class="product-item__link button button--green" href="">
+                  <span class="button__text">Заказать</span>
+                </a>
               </li>
               <li class="add-products__item product-item">
                 <div class="product-item__top">
@@ -314,7 +320,9 @@
                     </tr>
                   </table>
                 </div>
-                <a class="product-item__link" href="">Заказать</a>
+                <a class="product-item__link button button--green" href="">
+                  <span class="button__text">Заказать</span>
+                </a>
               </li>
               <li class="add-products__item product-item">
                 <div class="product-item__top">
@@ -326,13 +334,15 @@
                     </tr>
                   </table>
                 </div>
-                <a class="product-item__link" href="">Заказать</a>
+                <a class="product-item__link button button--green" href="">
+                  <span class="button__text">Заказать</span>
+                </a>
               </li>
             </ul>
             <div class="promo-wrapper">
               <p class="promo promo--bonus">
                 Закажите все
-                и получите чехол для
+                <br>и получите чехол для
                 кота в подарок!
               </p>
             </div>
@@ -347,15 +357,17 @@
         <div class="page-footer__address-inner">
           <h2 class="visually-hidden">Адрес компании</h2>
           <strong class="welcome">
-            Приглашаем к сотрудничеству дилеров!
+            Приглашаем <br>к сотрудничеству дилеров!
           </strong>
           <p class="address">
             ул. Большая
             Конюшенная, д. 19/8
-            Санкт-Петербург
+            <br class="address__br"><br class="address__br">Санкт-Петербург
           </p>
         </div>
-        <img class="page-footer__map" src="img/bg-map-mobile@1x.png" width="320" height="362" alt="Местоположение компании на карте">
+        <div class="page-footer__map-wrapper">
+          <img class="page-footer__map" src="img/bg-map-mobile@1x.png" width="320" height="362" alt="Местоположение компании на карте">
+        </div>
       </section>
 
       <div class="container">
@@ -467,5 +479,6 @@
       </div>
     </footer>
 
+    <script src="js/script.js"></script>
   </body>
 </html>

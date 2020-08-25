@@ -15,9 +15,9 @@
             <a class="main-nav__logo" href="index.html">
               <img src="img/logo-mobile.svg" width="191" height="38" alt="Кэт энерджи">
             </a>
-            <button class="main-nav__toggle" type="button">
+            <button class="main-nav__toggle main-nav__toggle--nojs" type="button">
               <span class="visually-hidden">
-                Открыть меню
+                Закрыть меню
               </span>
             </button>
           </div>
@@ -66,15 +66,15 @@
               <legend class="visually-hidden"><h2>Тип программы</h2></legend>
               <ul class="type-of-program__list  page-main__form-list">
                 <li class="type-of-program__item">
-                  <input class="type-of-program__input" id="field-lower-weight" type="radio" name="goal" value="lower-weight" checked>
+                  <input class="visually-hidden type-of-program__input" id="field-lower-weight" type="radio" name="goal" value="lower-weight" checked>
                   <label class="type-of-program__label" for="field-lower-weight">Похудение</label>
                 </li>
                 <li class="type-of-program__item">
-                  <input class="type-of-program__input" id="field-upper-weight" type="radio" name="goal" value="upper-weight">
+                  <input class="visually-hidden type-of-program__input" id="field-upper-weight" type="radio" name="goal" value="upper-weight">
                   <label class="type-of-program__label" for="field-upper-weight">Набор массы</label>
                 </li>
                 <li class="type-of-program__item">
-                  <input class="type-of-program__input" id="field-idontknow" type="radio" name="goal" value="idontknow">
+                  <input class="visually-hidden type-of-program__input" id="field-idontknow" type="radio" name="goal" value="idontknow">
                   <label class="type-of-program__label" for="field-idontknow">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
@@ -86,43 +86,49 @@
               (владельца кота)</h2>
             </legend>
             <ul class="owner-contacs__list page-main__form-list">
-              <li class="owner-contacs__item">
+              <li class="owner-contacs__item owner-contacs__item--mail">
                 <label class="owner-contacs__label" for="field-email">E-mail:<sup>*</sup></label>
                 <input class="owner-contacs__input" id="field-email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
               </li>
-              <li class="owner-contacs__item">
+              <li class="owner-contacs__item owner-contacs__item--phone">
                 <label class="owner-contacs__label" for="field-phone">Телефон:<sup>*</sup></label>
                 <input class="owner-contacs__input" id="field-phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
               </li>
             </ul>
           </fieldset>
           <fieldset class="comments page-main__fieldset">
-            <legend class="comments__legend"><h2 class="comments__title">Комментарий</h2></legend>
+            <legend class="comments__legend">
+              <h2 class="comments__title">Комментарий</h2>
+            </legend>
             <textarea class="comments__text" name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="addition page-main__fieldset">
-            <legend class="addition__legend"><h2 class="addition__title">Дополнительно</h2></legend>
+            <legend class="addition__legend">
+              <h2 class="addition__title">Дополнительно</h2>
+            </legend>
             <ul class="addition__list page-main__form-list">
               <li class="addition__item">
-                <input class="addition__input" id="field-sugar-substitute" type="checkbox" name="sugar-substitute" checked>
+                <input class="addition__input visually-hidden" id="field-sugar-substitute" type="checkbox" name="sugar-substitute" checked>
                 <label class="addition__label" for="field-sugar-substitute">Сахарозаменитель</label>
               </li>
               <li class="addition__item">
-                <input class="addition__input" id="field-water" type="checkbox" name="water">
+                <input class="addition__input visually-hidden" id="field-water" type="checkbox" name="water">
                 <label class="addition__label" for="field-water">Питьевая вода</label>
               </li>
               <li class="addition__item">
-                <input class="addition__input" id="field-milk" type="checkbox" name="milk">
+                <input class="addition__input visually-hidden" id="field-milk" type="checkbox" name="milk">
                 <label class="addition__label" for="field-milk">Молоко</label>
               </li>
               <li class="addition__item">
-                <input class="addition__input" id="field-vitamin" type="checkbox" name="vitamin">
+                <input class="addition__input visually-hidden" id="field-vitamin" type="checkbox" name="vitamin">
                 <label class="addition__label" for="field-vitamin">Витамины</label>
               </li>
             </ul>
           </fieldset>
           <div class="page-main__bottom-form">
-            <input class="page-main__submit" type="submit" value="Отправить заявку">
+            <button class="page-main__submit button button--green" type="submit">
+              <span class="button__text">Отправить заявку</span>
+            </button>
             <p class="page-main__field-comment">* — Обязательные поля</p>
           </div>
         </form>
@@ -135,15 +141,17 @@
         <div class="page-footer__address-inner">
           <h2 class="visually-hidden">Адрес компании</h2>
           <strong class="welcome">
-            Приглашаем к сотрудничеству дилеров!
+            Приглашаем <br>к сотрудничеству дилеров!
           </strong>
           <p class="address">
             ул. Большая
             Конюшенная, д. 19/8
-            Санкт-Петербург
+            <br class="address__br"><br class="address__br">Санкт-Петербург
           </p>
         </div>
-        <img class="page-footer__map" src="img/bg-map-mobile@1x.png" width="320" height="362" alt="Местоположение компании на карте">
+        <div class="page-footer__map-wrapper">
+          <img class="page-footer__map" src="img/bg-map-mobile@1x.png" width="320" height="362" alt="Местоположение компании на карте">
+        </div>
       </section>
 
       <div class="container">
@@ -255,5 +263,6 @@
       </div>
     </footer>
 
+    <script src="js/script.js"></script>
   </body>
 </html>

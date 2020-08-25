@@ -4,8 +4,8 @@
 }
 
 .page-footer__logo {
-  padding-top: 36px;
-  padding-bottom: 28px;
+  padding-top: 40px;
+  padding-bottom: 29px;
 
   text-align: center;
 
@@ -42,6 +42,9 @@
 
   @media (min-width: @tablet-width) {
     width: 171px;
+
+    font-size: 20px;
+    line-height: 26px;
   }
 }
 
@@ -56,6 +59,22 @@
 
   @media (min-width: @tablet-width) {
     width: 159px;
+
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
+}
+
+.address__br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
   }
 }
 
@@ -67,7 +86,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    min-height: 140px;
+    min-height: 156px;
   }
 
   @media (min-width: @desktop-width) {
@@ -89,20 +108,64 @@
   align-items: center;
   margin: 0 auto;
   padding: 28px 19px;
-  padding-bottom: 22px;
+  padding-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     max-width: @tablet-container;
-    padding: 65px 71px;
+    padding: 63px 71px;
     padding-bottom: 58px;
   }
 
   @media (min-width: @desktop-width) {
+    z-index: 3;
     position: absolute;
     top: 95px;
     left: calc(50% - 285px - 325px);
-    width: 570px;
+    width: 410px;
+    padding-left: 75px;
+    padding-right: 85px;
 
     background-color: @basic-white;
+  }
+}
+
+.page-footer__map {
+  min-width: @mobile-width;
+  width: 100%;
+}
+
+.page-footer__map-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 362px;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    height: 396px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 400px;
+  }
+}
+
+.page-footer__map-wrapper::before {
+  z-index: 2;
+  position: absolute;
+  top: calc(50% - 53px);
+  left: calc(50% - 62px);
+
+  width: 124px;
+  height: 106px;
+
+  content: "";
+
+  background-image: url("../img/map-pin.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @media (min-width: @desktop-width) {
+    left: calc(66.7% - 62px);
   }
 }
