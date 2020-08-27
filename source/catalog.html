@@ -398,7 +398,11 @@
           </p>
         </div>
         <div class="page-footer__map-wrapper">
-          <img class="page-footer__map" src="img/bg-map-mobile@1x.png" width="320" height="362" alt="Местоположение компании на карте">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img class="page-footer__map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="362" alt="Местоположение компании на карте">
+          </picture>
         </div>
       </section>
 
