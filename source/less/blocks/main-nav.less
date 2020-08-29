@@ -22,6 +22,19 @@
 
 .main-nav__logo {
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:not([href]) {
+    opacity: 1;
+  }
 }
 
 .main-nav__logo img {
