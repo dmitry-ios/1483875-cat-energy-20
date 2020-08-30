@@ -79,45 +79,20 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 20px;
   }
+}
 
-  &--mail::before {
-    position: absolute;
-    top: 16px;
-    right: 16px;
+.owner-contacs__icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
 
-    width: 17px;
-    height: 13px;
-
-    content: "";
-
-    background-image: url("../img/icon-mail.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-
-    @media (min-width: @tablet-width) {
-      top: 20px;
-      right: 20px;
-    }
+  @media (min-width: @tablet-width) {
+    top: 15px;
+    right: 15px;
   }
 
-  &--phone::before {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-
-    width: 20px;
-    height: 20px;
-
-    content: "";
-
-    background-image: url("../img/icon-phone.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-
-    @media (min-width: @tablet-width) {
-      top: 15px;
-      right: 16px;
-    }
+  &--status-error {
+    fill: @status-error;
   }
 }
 
@@ -165,5 +140,9 @@
     padding-left: 18px;
     margin-left: 23px;
     height: 46px;
+  }
+
+  &--status-error {
+    border: 2px solid @status-error;
   }
 }

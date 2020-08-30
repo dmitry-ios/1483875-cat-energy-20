@@ -93,10 +93,16 @@
               <li class="owner-contacs__item owner-contacs__item--mail">
                 <label class="owner-contacs__label" for="field-email">E-mail:<sup>*</sup></label>
                 <input class="owner-contacs__input" id="field-email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                <svg class="owner-contacs__icon" width="20" height="20" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/icons-sprite.svg#icon-mail"></use>
+                </svg>
               </li>
               <li class="owner-contacs__item owner-contacs__item--phone">
                 <label class="owner-contacs__label" for="field-phone">Телефон:<sup>*</sup></label>
                 <input class="owner-contacs__input" id="field-phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+                <svg class="owner-contacs__icon" width="20" height="20" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/icons-sprite.svg#icon-phone"></use>
+                </svg>
               </li>
             </ul>
           </fieldset>
@@ -155,6 +161,9 @@
         </div>
         <div class="page-footer__map-wrapper">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
             <img class="page-footer__map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="362" alt="Местоположение компании на карте">
