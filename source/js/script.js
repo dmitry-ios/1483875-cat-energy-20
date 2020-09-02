@@ -1,5 +1,5 @@
-const openText = "Открыть меню";
-const closeText = "Закрыть меню";
+var openText = "Открыть меню";
+var closeText = "Закрыть меню";
 
 var navMain = document.querySelector(".main-nav");
 var navToggle = document.querySelector(".main-nav__toggle");
