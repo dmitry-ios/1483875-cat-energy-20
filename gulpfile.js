@@ -128,7 +128,7 @@ gulp.task("build", gulp.series(clean, copy, styles, sprite, html, minjs));
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series("html"));
-  gulp.watch("source/*.js", gulp.series("minjs"));
+  gulp.watch("source/js/*.js", gulp.series("minjs"));
 }
 
 exports.default = gulp.series(

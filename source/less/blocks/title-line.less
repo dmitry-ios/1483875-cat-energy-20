@@ -1,0 +1,91 @@
+.title-line {
+  position: relative;
+
+  &::after {
+    z-index: -9;
+    position: absolute;
+    left: 0;
+
+    height: 2px;
+    width: 100vw;
+
+    content: "";
+
+    background-color: @basic-green;
+  }
+
+  &--contacts::after,
+  &--addition::after {
+    top: 42px;
+  }
+
+  &--comments::after {
+    top: 28px;
+  }
+
+  &--products::after {
+    top: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      z-index: -9;
+      position: absolute;
+      right: 0;
+
+      height: 2px;
+      width: 100vw;
+
+      content: "";
+
+      background-color: @basic-green;
+    }
+
+    &--products::after,
+    &--products::before {
+      top: 65px;
+    }
+
+    &--addition::after,
+    &--addition::before {
+      top: 75px;
+    }
+
+    &--contacts::after,
+    &--contacts::before {
+      top: 97px;
+    }
+
+    &--comments::after,
+    &--comments::before {
+      top: 67px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      left: calc(-100vw - 30px);
+      right: auto;
+    }
+
+    &--products::after,
+    &--products::before {
+      top: 72px;
+    }
+
+    &--addition::after,
+    &--addition::before {
+      top: 80px;
+    }
+
+    &--contacts::after,
+    &--contacts::before {
+      top: 92px;
+    }
+
+    &--comments::after,
+    &--comments::before {
+      top: 69px;
+    }
+  }
+}
