@@ -46,6 +46,10 @@
   }
 }
 
+.page-main__legend {
+  width: 100%;
+}
+
 .page-main__form {
   padding-top: 21px;
   padding-bottom: 32px;
@@ -156,5 +160,24 @@
   @media (min-width: @desktop-width) {
     width: 568px;
     margin-left: 0;
+  }
+}
+
+.page-main__form-input {
+  box-sizing: border-box;
+
+  border: 1px solid @basic-radio-border-grey;
+  border-radius: 0;
+
+  &:hover {
+    border-color: @basic-table-border;
+  }
+
+  &:focus {
+    border: 2px solid @special-dark-grey;
+  }
+
+  &--status-error {
+    border: 2px solid @status-error;
   }
 }

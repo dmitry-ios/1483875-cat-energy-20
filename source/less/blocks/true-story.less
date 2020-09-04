@@ -12,21 +12,21 @@
   background-color: @basic-light-grey;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 65px;
-  }
-
-  @media (min-width: @desktop-width) {
     z-index: 5;
     position: relative;
 
-    padding-bottom: 0;
+    padding-bottom: 65px;
 
     background-color: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
   }
 }
 
 .true-story::before {
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     z-index: -10;
     position: absolute;
     bottom: 0;

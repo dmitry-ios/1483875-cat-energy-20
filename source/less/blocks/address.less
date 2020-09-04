@@ -1,0 +1,33 @@
+.address {
+  margin: 0;
+  width: 141px;
+
+  font-family: @additional-font;
+  font-size: 14px;
+  line-height: 20px;
+  color: @special-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 159px;
+
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
+}
+
+.address__br {
+  display: none;
+
+  &--mobile {
+    display: inline;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
+}

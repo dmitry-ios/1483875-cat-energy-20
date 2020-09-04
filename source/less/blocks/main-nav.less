@@ -4,7 +4,26 @@
 
   @media (max-width: @mobile-only-width) {
     &--closed {
+      position: relative;
+
       padding-bottom: 14px;
+    }
+
+    &--closed::after {
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 50vw);
+
+      height: 1px;
+      width: 100vw;
+
+      content: "";
+
+      background-color: @basic-border-grey;
+    }
+
+    &--index::after {
+      background-color: transparent;
     }
   }
 
