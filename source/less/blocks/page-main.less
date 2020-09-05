@@ -170,14 +170,17 @@
   border-radius: 0;
 
   &:hover {
-    border-color: @basic-table-border;
+    outline: 1px solid @basic-table-border;
+    outline-offset: -1px;
   }
 
   &:focus {
-    border: 2px solid @special-dark-grey;
+    outline: 2px solid @special-dark-grey;
+    outline-offset: -2px;
   }
 
   &--status-error {
-    border: 2px solid @status-error;
+    outline: 2px solid @status-error;
+    outline-offset: -2px;
   }
 }
