@@ -6,6 +6,8 @@ var navToggle = document.querySelector(".main-nav__toggle");
 var textToggle = document.querySelector(".main-nav__toggle span");
 
 navToggle.classList.remove("main-nav__toggle--nojs");
+navMain.classList.add("main-nav--closed");
+textToggle.textContent = openText;
 
 navToggle.addEventListener("click", function() {
   if (navMain.classList.contains("main-nav--closed")) {
